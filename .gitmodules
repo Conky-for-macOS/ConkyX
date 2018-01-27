@@ -1,0 +1,3 @@
+[submodule "conky-for-macOS"]
+	path = conky-for-macOS
+	url = https://github.com/npyl/conky-for-macOS

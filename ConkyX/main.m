@@ -12,26 +12,19 @@ int main(int argc, const char * argv[])
 {
     NSUserDefaults * conkyDefaults = [[NSUserDefaults alloc] init];
     
-    if ([conkyDefaults valueForKey:@"isInstalled"])
+    if (![conkyDefaults valueForKey:@"isInstalled"])
     {
-        NSLog(@"Must install conky first!");
+        NSLog(@"conky: not installed");
         
         /*
          * show the conky installer window
          * which handles the whole installation process
          */
         NSApplicationMain(argc, argv);
- 
-        NSLog(@"Finished installing!");
-        
-        /*
-         * update conky defaults file
-         */
-        [conkyDefaults setValue:@"YESSS!!" forKey:@"isInstalled"];
     }
     else
     {
-        NSLog(@"Seems like conky is already installed!");
+        NSLog(@"conky: installed");
     }
     
     NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
