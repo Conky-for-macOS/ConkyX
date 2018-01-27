@@ -23,7 +23,7 @@
     /*
      * detect if Homebrew is installed
      */
-    if (access(HOMEBREW_PATH, F_OK) != 0) // XXX !=
+    if (access(HOMEBREW_PATH, F_OK) != 0)
     {
         NSAlert *hbalert = [[NSAlert alloc] init];
         [hbalert setMessageText:@"Homebrew missing"];
@@ -34,7 +34,7 @@
     /*
      * detect if XQuartz is installed
      */
-    if (access(XQUARTZ_PATH, F_OK) != 0) // XXX !=
+    if (access(XQUARTZ_PATH, F_OK) != 0)
     {
         NSAlert *xqalert = [[NSAlert alloc] init];
         [xqalert setMessageText:@"XQuartz is missing"];
