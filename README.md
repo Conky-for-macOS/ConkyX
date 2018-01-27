@@ -8,7 +8,7 @@ It also works as an installer (installs required libraries) the first time it ru
 
 # NOTES
 
-ConkyX requires Homebrew to be installed [brew](https://brew.sh/)
+ConkyX requires Homebrew to be present on computer [brew](https://brew.sh/)
 
 # COMPATIBILITY
 
