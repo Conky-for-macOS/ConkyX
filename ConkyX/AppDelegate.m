@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "MainWindowController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,6 +18,15 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+    
+    MainWindowController *mainWindowController = [[MainWindowController alloc] init];
+    
+    /*
+     * start the main window
+     */
+    [[NSBundle mainBundle] loadNibNamed:@"MainWindow" owner:mainWindowController topLevelObjects:nil];
+    
+    [mainWindowController beginInstalling];
 }
 
 
