@@ -9,22 +9,37 @@
 #import "MainWindowController.h"
 
 #define HOMEBREW_PATH "/usr/local/bin/brew"
+#define XQUARTZ_PATH  "/usr/X11"
 
 @implementation MainWindowController
 
 @synthesize window = _window;
 @synthesize progressIndicator = _progressIndicator;
 
--(void)beginInstalling
+- (void)beginInstalling
 {
     [_progressIndicator startAnimation:nil];
     
     /*
      * detect if Homebrew is installed
      */
-    if (access(HOMEBREW_PATH, F_OK) != 0)
+    if (access(HOMEBREW_PATH, F_OK) != 0) // XXX !=
     {
-        NSLog(@"You must install Homebrew first!");
+        NSAlert *hbalert = [[NSAlert alloc] init];
+        [hbalert setMessageText:@"Homebrew missing"];
+        [hbalert setInformativeText:@"Install Homebrew first using this link: https://brew.sh/\nOnce you install click OK to continue"];
+        [hbalert runModal];
+    }
+    
+    /*
+     * detect if XQuartz is installed
+     */
+    if (access(XQUARTZ_PATH, F_OK) != 0) // XXX !=
+    {
+        NSAlert *xqalert = [[NSAlert alloc] init];
+        [xqalert setMessageText:@"XQuartz is missing"];
+        [xqalert setInformativeText:@"Install XQuartz first using this link: https://www.xquartz.org/\nOnce you install click OK to continue"];
+        [xqalert runModal];
     }
     
     /*
@@ -48,9 +63,20 @@
     
     NSLog(@"Finished installing!");
     [_progressIndicator stopAnimation:nil];
-
     
-
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"ConkyX Finished Installing"];
+    [alert setInformativeText:@"Press OK to restart conky"];
+    [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode)
+    {
+        /*
+         * restart ConkyX
+         */
+         NSString *path = [[NSBundle mainBundle] bundlePath];
+         NSLog(@"%@", path);
+         [[NSWorkspace sharedWorkspace] launchApplication:path];
+         [NSApp terminate:nil];
+    }];
 }
 
 @end
