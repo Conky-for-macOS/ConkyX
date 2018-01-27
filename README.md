@@ -1,1 +1,3 @@
 # ConkyX
+
+![preview](conkyXgrab.png) 
