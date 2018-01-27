@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Cocoa/Cocoa.h>
 
 @interface MainWindowController : NSObject
+
+@property (strong) IBOutlet NSPanel *window;
+@property (weak) IBOutlet NSProgressIndicator *progressIndicator;
 
 - (void)beginInstalling;
 

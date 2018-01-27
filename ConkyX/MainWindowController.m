@@ -12,8 +12,13 @@
 
 @implementation MainWindowController
 
+@synthesize window = _window;
+@synthesize progressIndicator = _progressIndicator;
+
 -(void)beginInstalling
 {
+    [_progressIndicator startAnimation:nil];
+    
     /*
      * detect if Homebrew is installed
      */
@@ -27,20 +32,36 @@
      */
     NSTask *script = [[NSTask alloc] init];
     
+    NSString *scriptPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingString:@"/InstallLibraries.sh"];
+    
     [script setLaunchPath:@"/bin/sh"];
-    [script setArguments:@[@"InstallLibraries.sh"]];
+    [script setArguments:@[scriptPath]];
     
     [script launch];
     [script waitUntilExit];
-    
-    NSLog(@"Finished installing!");
     
     /*
      * update conky defaults file
      */
     NSUserDefaults *conkyDefaults = [[NSUserDefaults alloc] init];
-    
     [conkyDefaults setValue:@"1" forKey:@"isInstalled"];
+    
+    NSLog(@"Finished installing!");
+    [_progressIndicator stopAnimation:nil];
+    
+    NSAlert *alert = [[NSAlert alloc] init];
+    [alert setMessageText:@"ConkyX Finished Installing"];
+    [alert setInformativeText:@"Press OK to restart conky"];
+    [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode)
+    {
+        /*
+         * restart ConkyX
+         */
+        NSString *path = [[NSBundle mainBundle] bundlePath];
+        NSLog(@"%@", path);
+        [[NSWorkspace sharedWorkspace] launchApplication:path];
+        [NSApp terminate:nil];
+    }];
 }
 
 @end

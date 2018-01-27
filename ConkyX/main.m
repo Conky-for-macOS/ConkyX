@@ -12,7 +12,7 @@ int main(int argc, const char * argv[])
 {
     NSUserDefaults * conkyDefaults = [[NSUserDefaults alloc] init];
     
-    if (![conkyDefaults valueForKey:@"isInstalled"])
+    if ([conkyDefaults valueForKey:@"isInstalled"])
     {
         NSLog(@"conky: not installed");
         
@@ -40,5 +40,6 @@ int main(int argc, const char * argv[])
      * launch conky
      */
     [conky launch];
+    
     return 0;
 }
