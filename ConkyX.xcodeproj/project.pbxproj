@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC57EE41201CB1F800BC428E /* InstallLibraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = EC57EE40201CB1F800BC428E /* InstallLibraries.sh */; };
+		EC57EE74201CBF0600BC428E /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC57EE6F201CBEEB00BC428E /* conky */; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
 		EC923C3020169A230019C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2E20169A230019C772 /* Main.storyboard */; };
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
@@ -16,6 +17,30 @@
 		ECEDCC1C201CA99000BF1A90 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EC57EE6E201CBEEB00BC428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D898579C805F49EBB568853D;
+			remoteInfo = conky;
+		};
+		EC57EE70201CBEFF00BC428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 66BF8877EEDF486CBD56F480;
+			remoteInfo = ALL_BUILD;
+		};
+		EC57EE72201CBF0200BC428E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F50E1E1BE0B245B898C60188;
+			remoteInfo = conky;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		EC8A7E872016A7370020AD23 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -23,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				EC57EE74201CBF0600BC428E /* conky in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -30,12 +56,12 @@
 
 /* Begin PBXFileReference section */
 		EC57EE40201CB1F800BC428E /* InstallLibraries.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = InstallLibraries.sh; sourceTree = "<group>"; };
+		EC57EE64201CBEEB00BC428E /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/ConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC923C2F20169A230019C772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC923C3120169A230019C772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC923C3220169A230019C772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EC923C3420169A230019C772 /* ConkyX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ConkyX.entitlements; sourceTree = "<group>"; };
 		EC923C3A20169A540019C772 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		EC923C3C20169B410019C772 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC923C3D20169B410019C772 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,9 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC57EE65201CBEEB00BC428E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC57EE6F201CBEEB00BC428E /* conky */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EC923C1A20169A230019C772 = {
 			isa = PBXGroup;
 			children = (
+				EC57EE64201CBEEB00BC428E /* conky.xcodeproj */,
 				EC923C2520169A230019C772 /* ConkyX */,
 				EC923C2420169A230019C772 /* Products */,
 			);
@@ -83,7 +118,6 @@
 				ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */,
 				EC923C3A20169A540019C772 /* MainWindow.xib */,
 				EC57EE40201CB1F800BC428E /* InstallLibraries.sh */,
-				EC923C3420169A230019C772 /* ConkyX.entitlements */,
 			);
 			path = ConkyX;
 			sourceTree = "<group>";
@@ -103,6 +137,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC57EE73201CBF0200BC428E /* PBXTargetDependency */,
+				EC57EE71201CBEFF00BC428E /* PBXTargetDependency */,
 			);
 			name = ConkyX;
 			productName = ConkyX;
@@ -120,7 +156,7 @@
 				TargetAttributes = {
 					EC923C2220169A230019C772 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -135,12 +171,28 @@
 			mainGroup = EC923C1A20169A230019C772;
 			productRefGroup = EC923C2420169A230019C772 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EC57EE65201CBEEB00BC428E /* Products */;
+					ProjectRef = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EC923C2220169A230019C772 /* ConkyX */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EC57EE6F201CBEEB00BC428E /* conky */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = conky;
+			remoteRef = EC57EE6E201CBEEB00BC428E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EC923C2120169A230019C772 /* Resources */ = {
@@ -168,6 +220,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC57EE71201CBEFF00BC428E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ALL_BUILD;
+			targetProxy = EC57EE70201CBEFF00BC428E /* PBXContainerItemProxy */;
+		};
+		EC57EE73201CBF0200BC428E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = conky;
+			targetProxy = EC57EE72201CBF0200BC428E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EC923C2E20169A230019C772 /* Main.storyboard */ = {
@@ -288,14 +353,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ConkyX/ConkyX.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CC63MSFH9N;
 				INFOPLIST_FILE = ConkyX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -303,14 +369,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ConkyX/ConkyX.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CC63MSFH9N;
 				INFOPLIST_FILE = ConkyX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
