@@ -26,6 +26,9 @@
      */
     [[NSBundle mainBundle] loadNibNamed:@"MainWindow" owner:mainWindowController topLevelObjects:nil];
     
+    /*
+     * start the install process
+     */
     [mainWindowController beginInstalling];
 }
 

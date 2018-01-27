@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC57EE41201CB1F800BC428E /* InstallLibraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = EC57EE40201CB1F800BC428E /* InstallLibraries.sh */; };
 		EC57EE74201CBF0600BC428E /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC57EE6F201CBEEB00BC428E /* conky */; };
+		EC57EE77201CC47500BC428E /* InstallLibraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = EC57EE76201CC47500BC428E /* InstallLibraries.sh */; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
 		EC923C3020169A230019C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2E20169A230019C772 /* Main.storyboard */; };
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
@@ -55,8 +55,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EC57EE40201CB1F800BC428E /* InstallLibraries.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = InstallLibraries.sh; sourceTree = "<group>"; };
 		EC57EE64201CBEEB00BC428E /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/ConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
+		EC57EE76201CC47500BC428E /* InstallLibraries.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = InstallLibraries.sh; path = Resources/InstallLibraries.sh; sourceTree = SOURCE_ROOT; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC923C2F20169A230019C772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 				ECEDCC1A201CA99000BF1A90 /* MainWindowController.h */,
 				ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */,
 				EC923C3A20169A540019C772 /* MainWindow.xib */,
-				EC57EE40201CB1F800BC428E /* InstallLibraries.sh */,
+				EC57EE76201CC47500BC428E /* InstallLibraries.sh */,
 			);
 			path = ConkyX;
 			sourceTree = "<group>";
@@ -199,7 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC57EE41201CB1F800BC428E /* InstallLibraries.sh in Resources */,
+				EC57EE77201CC47500BC428E /* InstallLibraries.sh in Resources */,
 				EC923C2D20169A230019C772 /* Assets.xcassets in Resources */,
 				EC923C3020169A230019C772 /* Main.storyboard in Resources */,
 				EC923C3B20169A540019C772 /* MainWindow.xib in Resources */,
