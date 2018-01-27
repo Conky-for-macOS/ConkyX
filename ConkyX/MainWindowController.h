@@ -12,6 +12,7 @@
 @interface MainWindowController : NSObject
 
 @property (strong) IBOutlet NSPanel *window;
+@property (weak) IBOutlet NSTextField *logField;
 @property (weak) IBOutlet NSProgressIndicator *progressIndicator;
 
 - (void)beginInstalling;
