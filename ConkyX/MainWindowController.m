@@ -48,20 +48,9 @@
     
     NSLog(@"Finished installing!");
     [_progressIndicator stopAnimation:nil];
+
     
-    NSAlert *alert = [[NSAlert alloc] init];
-    [alert setMessageText:@"ConkyX Finished Installing"];
-    [alert setInformativeText:@"Press OK to restart conky"];
-    [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode)
-    {
-        /*
-         * restart ConkyX
-         */
-        NSString *path = [[NSBundle mainBundle] bundlePath];
-        NSLog(@"%@", path);
-        [[NSWorkspace sharedWorkspace] launchApplication:path];
-        [NSApp terminate:nil];
-    }];
+
 }
 
 @end
