@@ -83,9 +83,6 @@
         /*
          * update conky defaults file
          */
-//        [task.standardOutput setReadabilityHandler:nil];
-//        [task.standardError setReadabilityHandler:nil];
-        
         NSUserDefaults *conkyDefaults = [[NSUserDefaults alloc] init];
         [conkyDefaults setValue:@"1" forKey:@"isInstalled"];
         
@@ -98,6 +95,13 @@
            [alert setInformativeText:@"Press OK to restart conky"];
            [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode)
             {
+                /*
+                 * start the configuration panel
+                 * It provides functionality that will be incorporated to ManageConky.app later...
+                 */
+                //MainWindowController *mainWindowController = [[MainWindowController alloc] init];
+                //[[NSBundle mainBundle] loadNibNamed:@"ConfigureConky" owner:mainWindowController topLevelObjects:nil];
+                
                 /*
                  * restart ConkyX
                  */

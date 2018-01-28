@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC1D9352201DDC6C00BD55EF /* PFMoveApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1D9351201DDC6C00BD55EF /* PFMoveApplication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EC57EE74201CBF0600BC428E /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC57EE6F201CBEEB00BC428E /* conky */; };
 		EC57EE77201CC47500BC428E /* InstallLibraries.sh in Resources */ = {isa = PBXBuildFile; fileRef = EC57EE76201CC47500BC428E /* InstallLibraries.sh */; };
 		EC696791201CDA44001E2FDD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; };
@@ -69,8 +70,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC1D9350201DDC6C00BD55EF /* PFMoveApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFMoveApplication.h; path = LetsMove/PFMoveApplication.h; sourceTree = SOURCE_ROOT; };
+		EC1D9351201DDC6C00BD55EF /* PFMoveApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PFMoveApplication.m; path = LetsMove/PFMoveApplication.m; sourceTree = SOURCE_ROOT; };
 		EC57EE64201CBEEB00BC428E /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/ConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
-		EC57EE76201CC47500BC428E /* InstallLibraries.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = InstallLibraries.sh; path = Resources/InstallLibraries.sh; sourceTree = SOURCE_ROOT; };
+		EC57EE76201CC47500BC428E /* InstallLibraries.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = InstallLibraries.sh; path = ConkyX/Resources/InstallLibraries.sh; sourceTree = SOURCE_ROOT; };
 		EC696790201CDA44001E2FDD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC1D934A201DDC4300BD55EF /* LetsMove */ = {
+			isa = PBXGroup;
+			children = (
+				EC1D9350201DDC6C00BD55EF /* PFMoveApplication.h */,
+				EC1D9351201DDC6C00BD55EF /* PFMoveApplication.m */,
+			);
+			path = LetsMove;
+			sourceTree = "<group>";
+		};
 		EC22EB47201CDA0D0052A6D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,7 +147,9 @@
 		EC923C2520169A230019C772 /* ConkyX */ = {
 			isa = PBXGroup;
 			children = (
+				ECEF2231201D58D0001764E7 /* Resources */,
 				EC22EB47201CDA0D0052A6D5 /* Frameworks */,
+				EC1D934A201DDC4300BD55EF /* LetsMove */,
 				EC923C2C20169A230019C772 /* Assets.xcassets */,
 				EC923C2E20169A230019C772 /* Main.storyboard */,
 				EC923C3120169A230019C772 /* Info.plist */,
@@ -148,9 +162,16 @@
 				ECEDCC1A201CA99000BF1A90 /* MainWindowController.h */,
 				ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */,
 				EC923C3A20169A540019C772 /* MainWindow.xib */,
-				EC57EE76201CC47500BC428E /* InstallLibraries.sh */,
 			);
 			path = ConkyX;
+			sourceTree = "<group>";
+		};
+		ECEF2231201D58D0001764E7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC57EE76201CC47500BC428E /* InstallLibraries.sh */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +269,7 @@
 			files = (
 				ECEDCC1C201CA99000BF1A90 /* MainWindowController.m in Sources */,
 				EC923C3E20169B410019C772 /* AppDelegate.m in Sources */,
+				EC1D9352201DDC6C00BD55EF /* PFMoveApplication.m in Sources */,
 				EC923C3320169A230019C772 /* main.m in Sources */,
 				ECCA053F201D378B00F14527 /* ConfigureConkyController.m in Sources */,
 			);
