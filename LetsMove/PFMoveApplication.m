@@ -6,8 +6,6 @@
 //
 //  The contents of this file are dedicated to the public domain.
 
-
-
 #import "PFMoveApplication.h"
 
 #import <AppKit/AppKit.h>
@@ -117,7 +115,7 @@ void PFMoveToApplicationsFolderIfNecessary(void) {
 
 		[alert setMessageText:(installToUserApplications ? kStrMoveApplicationQuestionTitleHome : kStrMoveApplicationQuestionTitle)];
 
-		informativeText = kStrMoveApplicationQuestionMessage;
+        informativeText = kStrMoveApplicationQuestionMessage;
 
 		if (needAuthorization) {
 			informativeText = [informativeText stringByAppendingString:@" "];
@@ -232,6 +230,193 @@ fail:
 		[alert runModal];
 		MoveInProgress = NO;
 	}
+}
+
+/*
+ * Patches for ConkyX
+ *
+ *  * removed the suppress button
+ *  * changed the cancel button text to "Quit", made it terminate app if clicked
+ *  *
+ */
+void CXForciblyMoveToApplicationsFolder(void) {
+    
+    // Make sure to do our work on the main thread.
+    // Apparently Electron apps need this for things to work properly.
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            CXForciblyMoveToApplicationsFolder();
+        });
+        return;
+    }
+    
+    // Skip if user suppressed the alert before
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:AlertSuppressKey]) return;
+    
+    // Path of the bundle
+    NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
+    
+    // Check if the bundle is embedded in another application
+    BOOL isNestedApplication = IsApplicationAtPathNested(bundlePath);
+    
+    // Skip if the application is already in some Applications folder,
+    // unless it's inside another app's bundle.
+    if (IsInApplicationsFolder(bundlePath) && !isNestedApplication) return;
+    
+    // OK, looks like we'll need to do a move - set the status variable appropriately
+    MoveInProgress = YES;
+    
+    // File Manager
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    // Are we on a disk image?
+    NSString *diskImageDevice = ContainingDiskImageDevice(bundlePath);
+    
+    // Since we are good to go, get the preferred installation directory.
+    BOOL installToUserApplications = NO;
+    NSString *applicationsDirectory = PreferredInstallLocation(&installToUserApplications);
+    NSString *bundleName = [bundlePath lastPathComponent];
+    NSString *destinationPath = [applicationsDirectory stringByAppendingPathComponent:bundleName];
+    
+    // Check if we need admin password to write to the Applications directory
+    BOOL needAuthorization = ([fm isWritableFileAtPath:applicationsDirectory] == NO);
+    
+    // Check if the destination bundle is already there but not writable
+    needAuthorization |= ([fm fileExistsAtPath:destinationPath] && ![fm isWritableFileAtPath:destinationPath]);
+    
+    // Setup the alert
+    NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+    {
+        NSString *informativeText = nil;
+        
+        [alert setMessageText:(installToUserApplications ? kStrMoveApplicationQuestionTitleHome : kStrMoveApplicationQuestionTitle)];
+        
+        informativeText = kStrMoveApplicationQuestionMessage;
+        
+        if (needAuthorization) {
+            informativeText = [informativeText stringByAppendingString:@" "];
+            informativeText = [informativeText stringByAppendingString:kStrMoveApplicationQuestionInfoWillRequirePasswd];
+        }
+        else if (IsInDownloadsFolder(bundlePath)) {
+            // Don't mention this stuff if we need authentication. The informative text is long enough as it is in that case.
+            informativeText = [informativeText stringByAppendingString:@" "];
+            informativeText = [informativeText stringByAppendingString:kStrMoveApplicationQuestionInfoInDownloadsFolder];
+        }
+        
+        informativeText = [informativeText stringByAppendingString:@"\n\nConkyX MUST be installed in /Applications to work properly"];
+        
+        [alert setInformativeText:informativeText];
+        
+        // Add accept button
+        [alert addButtonWithTitle:kStrMoveApplicationButtonMove];
+        
+        // Add deny button
+        //NSButton *cancelButton = [alert addButtonWithTitle:kStrMoveApplicationButtonDoNotMove];
+        NSButton *cancelButton = [alert addButtonWithTitle:@"Quit"];
+        [cancelButton setKeyEquivalent:[NSString stringWithFormat:@"%C", 0x1b]]; // Escape key
+        
+        // Setup suppression button
+        //[alert setShowsSuppressionButton:YES];
+        //
+        //if (PFUseSmallAlertSuppressCheckbox) {
+        //    NSCell *cell = [[alert suppressionButton] cell];
+        //    [cell setControlSize:NSSmallControlSize];
+        //    [cell setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
+        //}
+    }
+    
+    // Activate app -- work-around for focus issues related to "scary file from internet" OS dialog.
+    if (![NSApp isActive]) {
+        [NSApp activateIgnoringOtherApps:YES];
+    }
+    
+    NSInteger runModalResult = [alert runModal];
+    
+    if (runModalResult == NSAlertFirstButtonReturn) {
+        NSLog(@"INFO -- Moving myself to the Applications folder");
+        
+        // Move
+        if (needAuthorization) {
+            BOOL authorizationCanceled;
+            
+            if (!AuthorizedInstall(bundlePath, destinationPath, &authorizationCanceled)) {
+                if (authorizationCanceled) {
+                    NSLog(@"INFO -- Not moving because user canceled authorization");
+                    MoveInProgress = NO;
+                    return;
+                }
+                else {
+                    NSLog(@"ERROR -- Could not copy myself to /Applications with authorization");
+                    goto fail;
+                }
+            }
+        }
+        else {
+            // If a copy already exists in the Applications folder, put it in the Trash
+            if ([fm fileExistsAtPath:destinationPath]) {
+                // But first, make sure that it's not running
+                if (IsApplicationAtPathRunning(destinationPath)) {
+                    // Give the running app focus and terminate myself
+                    NSLog(@"INFO -- Switching to an already running version");
+                    [[NSTask launchedTaskWithLaunchPath:@"/usr/bin/open" arguments:[NSArray arrayWithObject:destinationPath]] waitUntilExit];
+                    MoveInProgress = NO;
+                    exit(0);
+                }
+                else {
+                    if (!Trash([applicationsDirectory stringByAppendingPathComponent:bundleName]))
+                        goto fail;
+                }
+            }
+            
+            if (!CopyBundle(bundlePath, destinationPath)) {
+                NSLog(@"ERROR -- Could not copy myself to %@", destinationPath);
+                goto fail;
+            }
+        }
+        
+        // Trash the original app. It's okay if this fails.
+        // NOTE: This final delete does not work if the source bundle is in a network mounted volume.
+        //       Calling rm or file manager's delete method doesn't work either. It's unlikely to happen
+        //       but it'd be great if someone could fix this.
+        if (!isNestedApplication && diskImageDevice == nil && !DeleteOrTrash(bundlePath)) {
+            NSLog(@"WARNING -- Could not delete application after moving it to Applications folder");
+        }
+        
+        // Relaunch.
+        Relaunch(destinationPath);
+        
+        // Launched from within a disk image? -- unmount (if no files are open after 5 seconds,
+        // otherwise leave it mounted).
+        if (diskImageDevice && !isNestedApplication) {
+            NSString *script = [NSString stringWithFormat:@"(/bin/sleep 5 && /usr/bin/hdiutil detach %@) &", ShellQuotedString(diskImageDevice)];
+            [NSTask launchedTaskWithLaunchPath:@"/bin/sh" arguments:[NSArray arrayWithObjects:@"-c", script, nil]];
+        }
+        
+        MoveInProgress = NO;
+        exit(0);
+    }
+    else if (runModalResult == NSAlertSecondButtonReturn)
+    {
+        /* terminate because we need to have ConkyX installed in /Applications by all means */
+        [NSApp terminate:nil];
+    }
+    
+// Save the alert suppress preference if checked
+//    else if ([[alert suppressionButton] state] == NSOnState) {
+//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AlertSuppressKey];
+//    }
+    
+    MoveInProgress = NO;
+    return;
+    
+fail:
+    {
+        // Show failure message
+        alert = [[[NSAlert alloc] init] autorelease];
+        [alert setMessageText:kStrMoveApplicationCouldNotMove];
+        [alert runModal];
+        MoveInProgress = NO;
+    }
 }
 
 BOOL PFMoveIsInProgress() {

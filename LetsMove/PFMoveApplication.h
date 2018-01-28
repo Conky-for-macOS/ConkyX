@@ -19,6 +19,11 @@ extern "C" {
  
  Call from \c NSApplication's delegate method \c -applicationWillFinishLaunching: method. */
 void PFMoveToApplicationsFolderIfNecessary(void);
+    
+/**
+ Function based off of PFMoveToApplicationsFolderIfNecessary() to forcibly move the ConkyX to /Applications
+ because it is heavily tied to /Applications */
+void CXForciblyMoveToApplicationsFolder(void);
 
 /**
  Check whether an app move is currently in progress.

@@ -18,7 +18,13 @@
 @implementation AppDelegate
 
 - (void)applicationWillFinishLaunching:(NSNotification *)notification {
-    PFMoveToApplicationsFolderIfNecessary();
+    /*
+     * check if running from /Applications
+     * If not, use show dialog to choose either to "Move" or to "Quit"
+     * ConkyX will later rely heavily in running from /Applications thus
+     * we have to force ourselves into ...
+     */
+    CXForciblyMoveToApplicationsFolder();
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
