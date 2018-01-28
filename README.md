@@ -20,3 +20,9 @@ Grab latest version from [(link)](https://github.com/npyl/ConkyX/releases)
 # IMAGES
 
 ![preview](conkyXgrab.png) 
+
+# THANKS TO
+
+This project uses [LetsMove](https://github.com/potionfactory/LetsMove/)
+
+Sparkle framewrok [Sparkle](https://github.com/sparkle-project/Sparkle)
