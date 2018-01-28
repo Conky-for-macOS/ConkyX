@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,20 +24,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Bm-gb-yMg">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="6Bm-gb-yMg">
                         <rect key="frame" x="20" y="20" width="440" height="230"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="230" id="bKO-nS-y8Q"/>
+                        </constraints>
                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="border" drawsBackground="YES" id="zLG-wp-hS6">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="fYW-ea-Sgg">
+                    <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="fYW-ea-Sgg">
                         <rect key="frame" x="224" y="119" width="32" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     </progressIndicator>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="6Bm-gb-yMg" firstAttribute="top" secondItem="4yy-zl-Oy7" secondAttribute="top" constant="20" symbolic="YES" id="3BW-Vf-iaZ"/>
+                    <constraint firstItem="6Bm-gb-yMg" firstAttribute="centerY" secondItem="fYW-ea-Sgg" secondAttribute="centerY" id="Cml-iO-DYK"/>
+                    <constraint firstItem="6Bm-gb-yMg" firstAttribute="leading" secondItem="4yy-zl-Oy7" secondAttribute="leading" constant="20" symbolic="YES" id="MBN-3e-8Do"/>
+                    <constraint firstItem="fYW-ea-Sgg" firstAttribute="centerX" secondItem="6Bm-gb-yMg" secondAttribute="centerX" id="aft-Gl-Kaa"/>
+                    <constraint firstAttribute="trailing" secondItem="6Bm-gb-yMg" secondAttribute="trailing" constant="20" symbolic="YES" id="bxt-f4-q3Y"/>
+                </constraints>
             </view>
             <point key="canvasLocation" x="94" y="10"/>
         </window>
