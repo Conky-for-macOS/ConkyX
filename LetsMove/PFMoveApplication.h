@@ -19,11 +19,6 @@ extern "C" {
  
  Call from \c NSApplication's delegate method \c -applicationWillFinishLaunching: method. */
 void PFMoveToApplicationsFolderIfNecessary(void);
-    
-/**
- Function based off of PFMoveToApplicationsFolderIfNecessary() to forcibly move the ConkyX to /Applications
- because it is heavily tied to /Applications */
-void CXForciblyMoveToApplicationsFolder(void);
 
 /**
  Check whether an app move is currently in progress.
@@ -31,6 +26,17 @@ void CXForciblyMoveToApplicationsFolder(void);
  This can be used to work around a crash with apps that terminate after last window is closed.
  See https://github.com/potionfactory/LetsMove/issues/64 for details. */
 BOOL PFMoveIsInProgress(void);
+    
+// XXX move to seperate class... PFMoveApplication+Forcibly+Relaunch.h
+/**
+ Function based off of PFMoveToApplicationsFolderIfNecessary() to forcibly move the ConkyX to /Applications
+ because it is heavily tied to /Applications */
+void CXForciblyMoveToApplicationsFolder(void);
+
+/**
+ Function that calls Relaunch() which is used internally from PFMoveToApplicationsFolderIfNecessary() to implement relaunch
+ functionality. Used by ConkyX */
+void CXRelaunch(void);
 
 #ifdef __cplusplus
 }

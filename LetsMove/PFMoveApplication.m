@@ -419,6 +419,8 @@ fail:
     }
 }
 
+void CXRelaunch(void) { Relaunch(@"/Applications/ConkyX.app"); [NSApp terminate:nil]; }
+
 BOOL PFMoveIsInProgress() {
     return MoveInProgress;
 }

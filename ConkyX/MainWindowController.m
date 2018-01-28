@@ -8,6 +8,8 @@
 
 #import "MainWindowController.h"
 
+#import "PFMoveApplication.h"
+
 #define HOMEBREW_PATH "/usr/local/bin/brew"
 #define XQUARTZ_PATH  "/usr/X11"
 
@@ -103,12 +105,13 @@
                 //[[NSBundle mainBundle] loadNibNamed:@"ConfigureConky" owner:mainWindowController topLevelObjects:nil];
                 
                 /*
-                 * restart ConkyX
+                 * restart ConkyX using LetsMove code (serves us well, doesn't it?)
                  */
                 NSString *path = [[NSBundle mainBundle] bundlePath];
                 NSLog(@"%@", path);
-                //[[NSWorkspace sharedWorkspace] launchApplication:path];
-                //[NSApp terminate:nil];
+
+                // XXX
+                CXRelaunch();
             }];
         });
     }];
