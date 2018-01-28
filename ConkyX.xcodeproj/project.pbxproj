@@ -16,6 +16,8 @@
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
 		EC923C3B20169A540019C772 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC923C3A20169A540019C772 /* MainWindow.xib */; };
 		EC923C3E20169B410019C772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3D20169B410019C772 /* AppDelegate.m */; };
+		ECCA0537201D32FF00F14527 /* ConfigureConky.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECCA0536201D32FF00F14527 /* ConfigureConky.xib */; };
+		ECCA053F201D378B00F14527 /* ConfigureConkyController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA053E201D378B00F14527 /* ConfigureConkyController.m */; };
 		ECEDCC1C201CA99000BF1A90 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,9 @@
 		EC923C3A20169A540019C772 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		EC923C3C20169B410019C772 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC923C3D20169B410019C772 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ECCA0536201D32FF00F14527 /* ConfigureConky.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureConky.xib; sourceTree = "<group>"; };
+		ECCA053D201D378B00F14527 /* ConfigureConkyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigureConkyController.h; sourceTree = "<group>"; };
+		ECCA053E201D378B00F14527 /* ConfigureConkyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigureConkyController.m; sourceTree = "<group>"; };
 		ECEDCC1A201CA99000BF1A90 /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
 		ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +142,9 @@
 				EC923C3C20169B410019C772 /* AppDelegate.h */,
 				EC923C3D20169B410019C772 /* AppDelegate.m */,
 				EC923C3220169A230019C772 /* main.m */,
+				ECCA053D201D378B00F14527 /* ConfigureConkyController.h */,
+				ECCA053E201D378B00F14527 /* ConfigureConkyController.m */,
+				ECCA0536201D32FF00F14527 /* ConfigureConky.xib */,
 				ECEDCC1A201CA99000BF1A90 /* MainWindowController.h */,
 				ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */,
 				EC923C3A20169A540019C772 /* MainWindow.xib */,
@@ -224,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC57EE77201CC47500BC428E /* InstallLibraries.sh in Resources */,
+				ECCA0537201D32FF00F14527 /* ConfigureConky.xib in Resources */,
 				EC923C2D20169A230019C772 /* Assets.xcassets in Resources */,
 				EC923C3020169A230019C772 /* Main.storyboard in Resources */,
 				EC923C3B20169A540019C772 /* MainWindow.xib in Resources */,
@@ -240,6 +249,7 @@
 				ECEDCC1C201CA99000BF1A90 /* MainWindowController.m in Sources */,
 				EC923C3E20169B410019C772 /* AppDelegate.m in Sources */,
 				EC923C3320169A230019C772 /* main.m in Sources */,
+				ECCA053F201D378B00F14527 /* ConfigureConkyController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +386,7 @@
 		EC923C3820169A230019C772 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
@@ -389,15 +400,19 @@
 				);
 				INFOPLIST_FILE = ConkyX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		EC923C3920169A230019C772 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
@@ -411,9 +426,12 @@
 				);
 				INFOPLIST_FILE = ConkyX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
