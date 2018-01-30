@@ -233,11 +233,11 @@ fail:
 }
 
 /*
- * Patches for ConkyX
+ * Patches for ConkyX:
  *
  *  * removed the suppress button
  *  * changed the cancel button text to "Quit", made it terminate app if clicked
- *  *
+ *  * changed applicationsDirectory to @"/Applications" always.
  */
 void CXForciblyMoveToApplicationsFolder(void) {
     
@@ -249,9 +249,6 @@ void CXForciblyMoveToApplicationsFolder(void) {
         });
         return;
     }
-    
-    // Skip if user suppressed the alert before
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:AlertSuppressKey]) return;
     
     // Path of the bundle
     NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
@@ -274,7 +271,7 @@ void CXForciblyMoveToApplicationsFolder(void) {
     
     // Since we are good to go, get the preferred installation directory.
     BOOL installToUserApplications = NO;
-    NSString *applicationsDirectory = PreferredInstallLocation(&installToUserApplications);
+    NSString *applicationsDirectory = @"/Applications";
     NSString *bundleName = [bundlePath lastPathComponent];
     NSString *destinationPath = [applicationsDirectory stringByAppendingPathComponent:bundleName];
     
@@ -289,6 +286,7 @@ void CXForciblyMoveToApplicationsFolder(void) {
     {
         NSString *informativeText = nil;
         
+        // XXX this will never happen for ConkyX
         [alert setMessageText:(installToUserApplications ? kStrMoveApplicationQuestionTitleHome : kStrMoveApplicationQuestionTitle)];
         
         informativeText = kStrMoveApplicationQuestionMessage;
@@ -311,18 +309,8 @@ void CXForciblyMoveToApplicationsFolder(void) {
         [alert addButtonWithTitle:kStrMoveApplicationButtonMove];
         
         // Add deny button
-        //NSButton *cancelButton = [alert addButtonWithTitle:kStrMoveApplicationButtonDoNotMove];
         NSButton *cancelButton = [alert addButtonWithTitle:@"Quit"];
         [cancelButton setKeyEquivalent:[NSString stringWithFormat:@"%C", 0x1b]]; // Escape key
-        
-        // Setup suppression button
-        //[alert setShowsSuppressionButton:YES];
-        //
-        //if (PFUseSmallAlertSuppressCheckbox) {
-        //    NSCell *cell = [[alert suppressionButton] cell];
-        //    [cell setControlSize:NSSmallControlSize];
-        //    [cell setFont:[NSFont systemFontOfSize:[NSFont smallSystemFontSize]]];
-        //}
     }
     
     // Activate app -- work-around for focus issues related to "scary file from internet" OS dialog.
@@ -397,14 +385,11 @@ void CXForciblyMoveToApplicationsFolder(void) {
     }
     else if (runModalResult == NSAlertSecondButtonReturn)
     {
-        /* terminate because we need to have ConkyX installed in /Applications by all means */
+        /*
+         * terminate because we need to have ConkyX installed in /Applications by all means
+         */
         [NSApp terminate:nil];
     }
-    
-// Save the alert suppress preference if checked
-//    else if ([[alert suppressionButton] state] == NSOnState) {
-//        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:AlertSuppressKey];
-//    }
     
     MoveInProgress = NO;
     return;
@@ -419,7 +404,10 @@ fail:
     }
 }
 
-void CXRelaunch(void) { Relaunch(@"/Applications/ConkyX.app"); [NSApp terminate:nil]; }
+void CXRelaunch(void) {
+    Relaunch(@"/Applications/ConkyX.app");
+    [NSApp terminate:nil];
+}
 
 BOOL PFMoveIsInProgress() {
     return MoveInProgress;
