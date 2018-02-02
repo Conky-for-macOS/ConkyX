@@ -17,6 +17,7 @@
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
 		EC923C3B20169A540019C772 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC923C3A20169A540019C772 /* MainWindow.xib */; };
 		EC923C3E20169B410019C772 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3D20169B410019C772 /* AppDelegate.m */; };
+		ECA1EEF42024A1A0003EB518 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ECA1EEF32024A1A0003EB518 /* Credits.rtf */; };
 		ECCA0537201D32FF00F14527 /* ConfigureConky.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECCA0536201D32FF00F14527 /* ConfigureConky.xib */; };
 		ECCA053F201D378B00F14527 /* ConfigureConkyController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCA053E201D378B00F14527 /* ConfigureConkyController.m */; };
 		ECEDCC1C201CA99000BF1A90 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */; };
@@ -83,6 +84,7 @@
 		EC923C3A20169A540019C772 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		EC923C3C20169B410019C772 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EC923C3D20169B410019C772 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ECA1EEF32024A1A0003EB518 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		ECCA0536201D32FF00F14527 /* ConfigureConky.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigureConky.xib; sourceTree = "<group>"; };
 		ECCA053D201D378B00F14527 /* ConfigureConkyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigureConkyController.h; sourceTree = "<group>"; };
 		ECCA053E201D378B00F14527 /* ConfigureConkyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigureConkyController.m; sourceTree = "<group>"; };
@@ -156,12 +158,13 @@
 				EC923C3C20169B410019C772 /* AppDelegate.h */,
 				EC923C3D20169B410019C772 /* AppDelegate.m */,
 				EC923C3220169A230019C772 /* main.m */,
+				ECCA0536201D32FF00F14527 /* ConfigureConky.xib */,
 				ECCA053D201D378B00F14527 /* ConfigureConkyController.h */,
 				ECCA053E201D378B00F14527 /* ConfigureConkyController.m */,
-				ECCA0536201D32FF00F14527 /* ConfigureConky.xib */,
+				EC923C3A20169A540019C772 /* MainWindow.xib */,
 				ECEDCC1A201CA99000BF1A90 /* MainWindowController.h */,
 				ECEDCC1B201CA99000BF1A90 /* MainWindowController.m */,
-				EC923C3A20169A540019C772 /* MainWindow.xib */,
+				ECA1EEF32024A1A0003EB518 /* Credits.rtf */,
 			);
 			path = ConkyX;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				ECCA0537201D32FF00F14527 /* ConfigureConky.xib in Resources */,
 				EC923C2D20169A230019C772 /* Assets.xcassets in Resources */,
 				EC923C3020169A230019C772 /* Main.storyboard in Resources */,
+				ECA1EEF42024A1A0003EB518 /* Credits.rtf in Resources */,
 				EC923C3B20169A540019C772 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
