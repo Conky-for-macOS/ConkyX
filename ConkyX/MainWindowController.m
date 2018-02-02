@@ -10,6 +10,7 @@
 
 #import "PFMoveApplication.h"
 
+#define MANAGE_CONKY_PATH "/Applications/Manage Conky.app"
 #define HOMEBREW_PATH "/usr/local/bin/brew"
 #define XQUARTZ_PATH  "/usr/X11"
 
@@ -98,11 +99,12 @@
            [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode)
             {
                 /*
-                 * start the configuration panel
-                 * It provides functionality that will be incorporated to ManageConky.app later...
+                 * start the ManageConky.app if it exists to allow configuring conky
                  */
-                //MainWindowController *mainWindowController = [[MainWindowController alloc] init];
-                //[[NSBundle mainBundle] loadNibNamed:@"ConfigureConky" owner:mainWindowController topLevelObjects:nil];
+                if (access(MANAGE_CONKY_PATH, F_OK) == 0)
+                {
+                    [[NSWorkspace sharedWorkspace] launchApplication:[NSString stringWithUTF8String:MANAGE_CONKY_PATH]];
+                }
                 
                 /*
                  * restart ConkyX using LetsMove code (serves us well, doesn't it?)
