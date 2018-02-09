@@ -10,9 +10,11 @@
 
 int main(int argc, const char * argv[])
 {
-    NSUserDefaults * conkyDefaults = [[NSUserDefaults alloc] init];
+#define CONKYX_INSTALLED_LOCK_FMT @"/Users/%@/Library/ConkyX/.installed.lck"
     
-    if (![conkyDefaults valueForKey:@"isInstalled"])
+    NSFileManager *fm = [[NSFileManager alloc] init];
+    
+    if (![fm fileExistsAtPath:[NSString stringWithFormat:CONKYX_INSTALLED_LOCK_FMT, NSUserName()]])
     {
         NSLog(@"conky: not installed");
         

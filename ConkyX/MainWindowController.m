@@ -9,7 +9,9 @@
 #import "MainWindowController.h"
 
 #import "PFMoveApplication.h"
+#import <Foundation/NSFileManager.h>
 
+#define CONKYX_INSTALLED_LOCK_FMT @"/Users/%@/Library/ConkyX"
 #define MANAGE_CONKY_PATH "/Applications/Manage Conky.app"
 #define HOMEBREW_PATH "/usr/local/bin/brew"
 #define XQUARTZ_PATH  "/usr/X11"
@@ -24,7 +26,9 @@
 {
     NSFileHandle *fh = [notif object];
     NSData *data = [fh availableData];
-    if (data.length > 0) { // if data is found, re-register for more data (and print)
+    if (data.length > 0)
+    {
+        /* if data is found, re-register for more data (and print) */
         [fh waitForDataInBackgroundAndNotify];
         NSString *str = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -98,6 +102,22 @@
            [alert setInformativeText:@"Press OK to restart conky"];
            [alert beginSheetModalForWindow:_window completionHandler:^(NSModalResponse returnCode)
             {
+                NSError *error = nil;
+                NSFileManager *fm = [[NSFileManager alloc] init];
+                
+                NSString *ConkyXInstalledLock = [NSString stringWithFormat:CONKYX_INSTALLED_LOCK_FMT, NSUserName()];
+                
+                [fm createDirectoryAtPath:ConkyXInstalledLock withIntermediateDirectories:NO attributes:nil error:&error];
+                if (error)
+                {
+                    NSLog(@"Error creating lock directory: %@", error);
+                }
+                
+                if (![fm createFileAtPath:[ConkyXInstalledLock stringByAppendingString:@"/.installed.lck"] contents:nil attributes:nil])
+                {
+                    NSLog(@"Error creating lock.");
+                }
+            
                 /*
                  * start the ManageConky.app if it exists to allow configuring conky
                  */
@@ -111,7 +131,7 @@
                  */
                 NSString *path = [[NSBundle mainBundle] bundlePath];
                 NSLog(@"%@", path);
-
+                
                 // XXX
                 CXRelaunch();
             }];
