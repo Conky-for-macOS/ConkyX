@@ -117,6 +117,11 @@
                 {
                     NSLog(@"Error creating lock.");
                 }
+                
+                if (![fm createSymbolicLinkAtPath:@"/usr/local/bin/conky" withDestinationPath:@"/Applications/ConkyX.app/Contents/Resources/conky" error:&error])
+                {
+                    NSLog(@"Error creating symbolic link to /usr/local/bin: %@", error);
+                }
             
                 /*
                  * start the ManageConky.app if it exists to allow configuring conky
