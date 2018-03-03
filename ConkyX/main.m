@@ -10,8 +10,7 @@
 
 int main(int argc, const char * argv[])
 {
-    NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
-    NSString * conkyPath = [resourcePath stringByAppendingString:@"/conky"];
+    NSString * conkyPath = [[NSBundle mainBundle] pathForResource:@"conky" ofType:nil];
     
     /*
      * create conky task object
