@@ -10,25 +10,6 @@
 
 int main(int argc, const char * argv[])
 {
-#define CONKYX_INSTALLED_LOCK_FMT @"/Users/%@/Library/ConkyX/.installed.lck"
-    
-    NSFileManager *fm = [[NSFileManager alloc] init];
-    
-    if (![fm fileExistsAtPath:[NSString stringWithFormat:CONKYX_INSTALLED_LOCK_FMT, NSUserName()]])
-    {
-        NSLog(@"conky: not installed");
-        
-        /*
-         * show the conky installer window
-         * which handles the whole installation process
-         */
-        NSApplicationMain(argc, argv);
-    }
-    else
-    {
-        NSLog(@"conky: installed");
-    }
-    
     NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
     NSString * conkyPath = [resourcePath stringByAppendingString:@"/conky"];
     
@@ -42,6 +23,5 @@ int main(int argc, const char * argv[])
      * launch conky
      */
     [conky launch];
-    
     return 0;
 }
