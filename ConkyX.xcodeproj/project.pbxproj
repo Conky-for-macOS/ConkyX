@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC57EE74201CBF0600BC428E /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC57EE6F201CBEEB00BC428E /* conky */; };
-		EC6663E1204B565300F753A2 /* LetsMove in Resources */ = {isa = PBXBuildFile; fileRef = EC6663E0204B565300F753A2 /* LetsMove */; };
 		EC696791201CDA44001E2FDD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; };
 		EC696792201CDA4B001E2FDD /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
@@ -65,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		EC57EE64201CBEEB00BC428E /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/ConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
-		EC6663E0204B565300F753A2 /* LetsMove */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LetsMove; sourceTree = SOURCE_ROOT; };
 		EC696790201CDA44001E2FDD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				EC22EB47201CDA0D0052A6D5 /* Frameworks */,
-				EC6663E0204B565300F753A2 /* LetsMove */,
 				EC923C2C20169A230019C772 /* Assets.xcassets */,
 				EC923C2E20169A230019C772 /* Main.storyboard */,
 				EC923C3120169A230019C772 /* Info.plist */,
@@ -210,7 +207,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6663E1204B565300F753A2 /* LetsMove in Resources */,
 				EC923C2D20169A230019C772 /* Assets.xcassets in Resources */,
 				EC923C3020169A230019C772 /* Main.storyboard in Resources */,
 			);
