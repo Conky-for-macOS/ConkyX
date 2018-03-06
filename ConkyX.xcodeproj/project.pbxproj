@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC57EE74201CBF0600BC428E /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC57EE6F201CBEEB00BC428E /* conky */; };
+		EC50918B204F1EFB00A0C155 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		EC696791201CDA44001E2FDD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; };
 		EC696792201CDA4B001E2FDD /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
@@ -16,25 +16,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EC57EE6E201CBEEB00BC428E /* PBXContainerItemProxy */ = {
+		EC509185204F1EA800A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D898579C805F49EBB568853D;
+			remoteGlobalIDString = CE03C49931E14A8B8373644D;
 			remoteInfo = conky;
 		};
-		EC57EE70201CBEFF00BC428E /* PBXContainerItemProxy */ = {
+		EC509187204F1EEB00A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 66BF8877EEDF486CBD56F480;
+			remoteGlobalIDString = B4D15367D91D45A5AF419CD4;
 			remoteInfo = ALL_BUILD;
 		};
-		EC57EE72201CBF0200BC428E /* PBXContainerItemProxy */ = {
+		EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = F50E1E1BE0B245B898C60188;
+			remoteGlobalIDString = 3CD22D94DB8A4C8683A0E4BE;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -46,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				EC57EE74201CBF0600BC428E /* conky in CopyFiles */,
+				EC50918B204F1EFB00A0C155 /* conky in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EC57EE64201CBEEB00BC428E /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/ConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
+		EC50917B204F1EA800A0C155 /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/forConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
 		EC696790201CDA44001E2FDD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,10 +92,10 @@
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		EC57EE65201CBEEB00BC428E /* Products */ = {
+		EC50917C204F1EA800A0C155 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC57EE6F201CBEEB00BC428E /* conky */,
+				EC509186204F1EA800A0C155 /* conky */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,7 +103,7 @@
 		EC923C1A20169A230019C772 = {
 			isa = PBXGroup;
 			children = (
-				EC57EE64201CBEEB00BC428E /* conky.xcodeproj */,
+				EC50917B204F1EA800A0C155 /* conky.xcodeproj */,
 				EC923C2520169A230019C772 /* ConkyX */,
 				EC923C2420169A230019C772 /* Products */,
 			);
@@ -145,8 +145,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				EC57EE73201CBF0200BC428E /* PBXTargetDependency */,
-				EC57EE71201CBEFF00BC428E /* PBXTargetDependency */,
+				EC509188204F1EEB00A0C155 /* PBXTargetDependency */,
+				EC50918A204F1EEF00A0C155 /* PBXTargetDependency */,
 			);
 			name = ConkyX;
 			productName = ConkyX;
@@ -181,8 +181,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EC57EE65201CBEEB00BC428E /* Products */;
-					ProjectRef = EC57EE64201CBEEB00BC428E /* conky.xcodeproj */;
+					ProductGroup = EC50917C204F1EA800A0C155 /* Products */;
+					ProjectRef = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -193,11 +193,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EC57EE6F201CBEEB00BC428E /* conky */ = {
+		EC509186204F1EA800A0C155 /* conky */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = conky;
-			remoteRef = EC57EE6E201CBEEB00BC428E /* PBXContainerItemProxy */;
+			remoteRef = EC509185204F1EA800A0C155 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -226,15 +226,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EC57EE71201CBEFF00BC428E /* PBXTargetDependency */ = {
+		EC509188204F1EEB00A0C155 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALL_BUILD;
-			targetProxy = EC57EE70201CBEFF00BC428E /* PBXContainerItemProxy */;
+			targetProxy = EC509187204F1EEB00A0C155 /* PBXContainerItemProxy */;
 		};
-		EC57EE73201CBF0200BC428E /* PBXTargetDependency */ = {
+		EC50918A204F1EEF00A0C155 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = conky;
-			targetProxy = EC57EE72201CBF0200BC428E /* PBXContainerItemProxy */;
+			targetProxy = EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
