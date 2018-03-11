@@ -14,10 +14,6 @@ Grab latest version from [(link)](https://github.com/npyl/ConkyX/releases)
 
 # THANKS TO
 
-This project uses [LetsMove](https://github.com/potionfactory/LetsMove/)
-
-Sparkle framewrok [Sparkle](https://github.com/sparkle-project/Sparkle)
-
 conky [original conky](https://github.com/brndnmtthws/conky)
 
 conky-for-macOS [conky for macOS](https://github.com/npyl/conky-for-macOS) 
