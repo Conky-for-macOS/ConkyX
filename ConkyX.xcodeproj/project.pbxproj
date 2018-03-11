@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EC50918B204F1EFB00A0C155 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		EC696791201CDA44001E2FDD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; };
-		EC696792201CDA4B001E2FDD /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC696790201CDA44001E2FDD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
 		EC923C3020169A230019C772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2E20169A230019C772 /* Main.storyboard */; };
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
@@ -50,21 +48,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECE89A02201CD70700175E87 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EC696792201CDA4B001E2FDD /* Sparkle.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EC50917B204F1EA800A0C155 /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/forConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
-		EC696790201CDA44001E2FDD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC923C2F20169A230019C772 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,26 +59,7 @@
 		EC923C3220169A230019C772 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFrameworksBuildPhase section */
-		EC923C2020169A230019C772 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC696791201CDA44001E2FDD /* Sparkle.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
 /* Begin PBXGroup section */
-		EC22EB47201CDA0D0052A6D5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EC696790201CDA44001E2FDD /* Sparkle.framework */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		EC50917C204F1EA800A0C155 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +88,6 @@
 		EC923C2520169A230019C772 /* ConkyX */ = {
 			isa = PBXGroup;
 			children = (
-				EC22EB47201CDA0D0052A6D5 /* Frameworks */,
 				EC923C2C20169A230019C772 /* Assets.xcassets */,
 				EC923C2E20169A230019C772 /* Main.storyboard */,
 				EC923C3120169A230019C772 /* Info.plist */,
@@ -137,10 +104,8 @@
 			buildConfigurationList = EC923C3720169A230019C772 /* Build configuration list for PBXNativeTarget "ConkyX" */;
 			buildPhases = (
 				EC923C1F20169A230019C772 /* Sources */,
-				EC923C2020169A230019C772 /* Frameworks */,
 				EC923C2120169A230019C772 /* Resources */,
 				EC8A7E872016A7370020AD23 /* CopyFiles */,
-				ECE89A02201CD70700175E87 /* CopyFiles */,
 			);
 			buildRules = (
 			);
