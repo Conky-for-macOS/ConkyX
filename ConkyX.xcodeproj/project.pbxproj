@@ -25,14 +25,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = B4D15367D91D45A5AF419CD4;
+			remoteGlobalIDString = 7A31165157684F3DB786BE3C;
 			remoteInfo = ALL_BUILD;
 		};
 		EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 3CD22D94DB8A4C8683A0E4BE;
+			remoteGlobalIDString = 12DAD49E15F24DC3AB3B20C9;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -129,7 +129,7 @@
 				TargetAttributes = {
 					EC923C2220169A230019C772 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -324,7 +324,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CC63MSFH9N;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -350,7 +350,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = CC63MSFH9N;
 				FRAMEWORK_SEARCH_PATHS = (
