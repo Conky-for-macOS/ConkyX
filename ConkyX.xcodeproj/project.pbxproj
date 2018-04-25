@@ -25,14 +25,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 7A31165157684F3DB786BE3C;
+			remoteGlobalIDString = A75DEEFB0B404B2DBA037ED0;
 			remoteInfo = ALL_BUILD;
 		};
 		EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 12DAD49E15F24DC3AB3B20C9;
+			remoteGlobalIDString = 80D5E124BE1944F4B13AB4D4;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -263,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -312,7 +312,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
