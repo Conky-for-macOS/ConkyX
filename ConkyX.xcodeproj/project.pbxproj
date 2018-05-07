@@ -25,14 +25,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = A75DEEFB0B404B2DBA037ED0;
+			remoteGlobalIDString = 67E211BA203740EB92D01BD3;
 			remoteInfo = ALL_BUILD;
 		};
 		EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 80D5E124BE1944F4B13AB4D4;
+			remoteGlobalIDString = A5844F6610E540D29B765400;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -333,12 +333,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ConkyX",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(PROJECT_DIR)/ConkyX/Frameworks",
 				);
 				INFOPLIST_FILE = ConkyX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,12 +356,10 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ConkyX",
-					"$(PROJECT_DIR)/Frameworks",
-					"$(PROJECT_DIR)/ConkyX/Frameworks",
 				);
 				INFOPLIST_FILE = ConkyX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
