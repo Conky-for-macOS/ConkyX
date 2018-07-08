@@ -10,17 +10,5 @@
 
 int main(int argc, const char * argv[])
 {
-    NSString * conkyPath = [[NSBundle mainBundle] pathForResource:@"conky" ofType:nil];
-    
-    /*
-     * create conky task object
-     */
-    NSTask * conky = [[NSTask alloc] init];
-    [conky setLaunchPath:conkyPath];
-    
-    /*
-     * launch conky
-     */
-    [conky launch];
-    return 0;
+    return NSApplicationMain(argc, argv);
 }
