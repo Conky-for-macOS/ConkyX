@@ -8,20 +8,87 @@
 
 #import "ViewController.h"
 
+#define CONKY_SYMLINK @"/usr/local/bin/conky"
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    
 }
 
+- (IBAction)runCommand:(id)sender {
+    
+    // XXX bug exists when -c 'path with spaces'
+    
+    if (![sender stringValue])
+        return;
+    
+    if ([[sender stringValue] length] == 0)
+        return;
+    
+    NSArray *args = [[sender stringValue] componentsSeparatedByString:@" "];
+    if (!args)
+        return;
+    
+    NSTask *conky = [[NSTask alloc] init];
+    conky.launchPath = CONKY_SYMLINK;
+    conky.arguments = args;
+
+    /*
+     * Try to discover workingDirectory
+     */
+    if ([args containsObject:@"-s"])
+    {
+        NSUInteger i = [args indexOfObject:@"-s"];
+        conky.currentDirectoryPath = [args[i] stringByDeletingLastPathComponent];
+    }
+    
+    /*
+     * All done; Launch the thing
+     */
+    @try {
+        [conky launch];
+    } @catch (NSException *exception) {
+        NSLog(@"Got exception: %@", exception);
+    } @finally {
+        
+    }
+}
+
+
+- (IBAction)runScript:(id)sender {
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    
+    openPanel.allowsMultipleSelection = YES;
+    
+    [openPanel beginSheetModalForWindow:[NSApp mainWindow] completionHandler:^(NSModalResponse result) {
+       if (result != NSModalResponseOK)
+           return;
+        
+        NSArray *urls = [openPanel URLs];
+        
+        for (NSURL *url in urls)
+        {
+            NSString *path = [url relativePath];
+            
+            NSTask *conky = [[NSTask alloc] init];
+            conky.launchPath = CONKY_SYMLINK;
+            conky.arguments = @[@"-c", path];
+            conky.currentDirectoryPath = [[path stringByDeletingLastPathComponent] stringByStandardizingPath];
+            
+            @try {
+                [conky launch];
+            } @catch (NSException *exception) {
+                NSLog(@"Got exception: %@", exception);
+            } @finally {
+                
+            }
+        }
+    }];
+}
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
 }
-
 
 @end
