@@ -7,6 +7,6 @@ It offers the ability to run conky with just a double-click, eliminating the use
 
 ## USES
 
-conky [original conky](https://github.com/brndnmtthws/conky)
+[conky](https://github.com/brndnmtthws/conky) - original conky
 
-conky-for-macOS [conky for macOS](https://github.com/npyl/conky-for-macOS) 
+[conky for macOS](https://github.com/npyl/conky-for-macOS) - the port
