@@ -31,17 +31,17 @@
     }
 }
 
-- (IBAction)runCommand:(id)sender {
-    
+- (IBAction)runCommand:(id)sender
+{
     // XXX bug exists when -c 'path with spaces'
     
-    if (![sender stringValue])
+    if (![_commandField stringValue])
         return;
     
-    if ([[sender stringValue] length] == 0)
+    if ([[_commandField stringValue] length] == 0)
         return;
     
-    NSArray *args = [[sender stringValue] componentsSeparatedByString:@" "];
+    NSArray *args = [[_commandField stringValue] componentsSeparatedByString:@" "];
     if (!args)
         return;
     
@@ -52,10 +52,10 @@
     /*
      * Try to discover workingDirectory
      */
-    if ([args containsObject:@"-s"])
+    if ([args containsObject:@"-c"])
     {
-        NSUInteger i = [args indexOfObject:@"-s"];
-        conky.currentDirectoryPath = [args[i] stringByDeletingLastPathComponent];
+        NSUInteger i = [args indexOfObject:@"-c"];
+        conky.currentDirectoryPath = [args[i + 1] stringByDeletingLastPathComponent];
     }
     
     /*

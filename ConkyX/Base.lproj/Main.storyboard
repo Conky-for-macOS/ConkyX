@@ -735,7 +735,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YVW-eA-r29">
-                                <rect key="frame" x="573" y="68" width="42" height="23"/>
+                                <rect key="frame" x="573.5" y="68" width="42" height="23"/>
                                 <buttonCell key="cell" type="roundTextured" title="RUN" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l6O-LL-Edt">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
