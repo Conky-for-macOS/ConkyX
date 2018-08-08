@@ -9,4 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ViewController : NSViewController<NSTextFieldDelegate>
+
+@property (weak) IBOutlet NSTextField *commandField;
+
 @end

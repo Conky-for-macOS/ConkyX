@@ -14,6 +14,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    static bool firstRun = true;
+    if (firstRun)
+    {
+        firstRun = false;
+        
+        NSArray *args = [[NSProcessInfo processInfo] arguments];
+        
+        if ([args count] == 1)
+            return;
+
+        NSArray *argsWithoutPWD = [args subarrayWithRange:NSMakeRange(1, [args count] - 1)];
+        
+        _commandField.stringValue = [argsWithoutPWD componentsJoinedByString:@" "];
+    }
 }
 
 - (IBAction)runCommand:(id)sender {
@@ -55,7 +70,6 @@
     }
 }
 
-
 - (IBAction)runScript:(id)sender {
     NSOpenPanel *openPanel = [NSOpenPanel openPanel];
     
@@ -87,8 +101,8 @@
     }];
 }
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-}
+//- (void)setRepresentedObject:(id)representedObject {
+//    [super setRepresentedObject:representedObject];
+//}
 
 @end
