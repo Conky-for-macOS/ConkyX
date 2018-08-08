@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import "../../Manage Conky/MCFilesystem.h"
+
 #define CONKY_SYMLINK @"/usr/local/bin/conky"
 
 @implementation ViewController
@@ -82,16 +84,8 @@
         for (NSURL *url in urls)
         {
             NSString *config = [url path];
+            NSString *correctedConfig = MCNormalise(config);
             NSString *currentDirectory = [config stringByDeletingLastPathComponent];
-
-            /*
-             * config must have the spaces replaced by '\'
-             * Because bash is - well... bash! - and it won't
-             * parse them correctly.  Also fix the '(' and ')'.
-             */
-            NSString *correctedConfig = [config stringByReplacingOccurrencesOfString:@" " withString:@"\\ "];
-            correctedConfig = [correctedConfig stringByReplacingOccurrencesOfString:@"(" withString:@"\\("];
-            correctedConfig = [correctedConfig stringByReplacingOccurrencesOfString:@")" withString:@"\\)"];
             
             NSString *cmd = [NSString stringWithFormat:@"%@ -c %@", CONKY_SYMLINK, correctedConfig];
             
