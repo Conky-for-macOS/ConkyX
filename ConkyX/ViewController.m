@@ -65,8 +65,6 @@
         [conky launch];
     } @catch (NSException *exception) {
         NSLog(@"Got exception: %@", exception);
-    } @finally {
-        
     }
 }
 
@@ -83,26 +81,36 @@
         
         for (NSURL *url in urls)
         {
-            NSString *path = [url relativePath];
+            NSString *config = [url path];
+            NSString *currentDirectory = [config stringByDeletingLastPathComponent];
+
+            /*
+             * config must have the spaces replaced by '\'
+             * Because bash is - well... bash! - and it won't
+             * parse them correctly.  Also fix the '(' and ')'.
+             */
+            NSString *correctedConfig = [config stringByReplacingOccurrencesOfString:@" " withString:@"\\ "];
+            correctedConfig = [correctedConfig stringByReplacingOccurrencesOfString:@"(" withString:@"\\("];
+            correctedConfig = [correctedConfig stringByReplacingOccurrencesOfString:@")" withString:@"\\)"];
             
-            NSTask *conky = [[NSTask alloc] init];
-            conky.launchPath = CONKY_SYMLINK;
-            conky.arguments = @[@"-c", path];
-            conky.currentDirectoryPath = [[path stringByDeletingLastPathComponent] stringByStandardizingPath];
+            NSString *cmd = [NSString stringWithFormat:@"%@ -c %@", CONKY_SYMLINK, correctedConfig];
             
-            @try {
-                [conky launch];
-            } @catch (NSException *exception) {
-                NSLog(@"Got exception: %@", exception);
-            } @finally {
-                
-            }
+            NSTask *task = [[NSTask alloc] init];
+            [task setLaunchPath:@"/bin/bash"];
+            [task setArguments:@[@"-l",
+                                 @"-c",
+                                 cmd]];
+            [task setCurrentDirectoryPath:currentDirectory];
+            [task setEnvironment:[NSProcessInfo processInfo].environment];          /*
+                                                                                     * Some conky widgets like Conky-Vision
+                                                                                     * (original: https://github.com/zagortenay333/conky-Vision)
+                                                                                     * use external executables thus we need to
+                                                                                     * provide the basic environment for them
+                                                                                     * like environment-variables.
+                                                                                     */
+            [task launch];
         }
     }];
 }
-
-//- (void)setRepresentedObject:(id)representedObject {
-//    [super setRepresentedObject:representedObject];
-//}
 
 @end
