@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0916C99A2129BC9E00DBCD97 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		097AFB0A20F2653C001F05EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097AFB0820F2653C001F05EA /* Main.storyboard */; };
 		097AFB0F20F2654F001F05EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0C20F2654F001F05EA /* AppDelegate.m */; };
 		097AFB1020F2654F001F05EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0E20F2654F001F05EA /* ViewController.m */; };
 		09B56B0A211B576400075BC8 /* MCFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B56B09211B576400075BC8 /* MCFilesystem.m */; };
-		EC50918B204F1EFB00A0C155 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
 /* End PBXBuildFile section */
@@ -28,14 +28,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 61934A58689E483B9CC4DDFB;
+			remoteGlobalIDString = B5193CD3858A4D0AA91242BE;
 			remoteInfo = ALL_BUILD;
 		};
 		EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BB7C0C3966AF47C88396013B;
+			remoteGlobalIDString = D3A02AB94AF547E58C785CB4;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				EC50918B204F1EFB00A0C155 /* conky in CopyFiles */,
+				0916C99A2129BC9E00DBCD97 /* conky in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
