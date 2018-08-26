@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a><img src="icon.jpg" alt="ConkyX" width="100"></a>
+  <a><img src="https://github.com/brndnmtthws/conky/blob/master/logo/logomark-violet.png" alt="ConkyX" width="100"></a>
   <br>
   ConkyX
   <br>
