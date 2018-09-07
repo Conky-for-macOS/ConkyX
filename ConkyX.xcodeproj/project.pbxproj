@@ -11,6 +11,7 @@
 		097AFB0A20F2653C001F05EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097AFB0820F2653C001F05EA /* Main.storyboard */; };
 		097AFB0F20F2654F001F05EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0C20F2654F001F05EA /* AppDelegate.m */; };
 		097AFB1020F2654F001F05EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0E20F2654F001F05EA /* ViewController.m */; };
+		09853BDA2142FB580054F572 /* MCFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 09853BD92142FB580054F572 /* MCFilesystem.m */; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		097AFB0C20F2654F001F05EA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		097AFB0D20F2654F001F05EA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		097AFB0E20F2654F001F05EA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		09853BD92142FB580054F572 /* MCFilesystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCFilesystem.m; path = "../../../Manage Conky/MCFilesystem.m"; sourceTree = "<group>"; };
 		EC50917B204F1EA800A0C155 /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/forConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		09853BD82142FB390054F572 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				09853BD92142FB580054F572 /* MCFilesystem.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
 		EC50917C204F1EA800A0C155 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 		EC923C2520169A230019C772 /* ConkyX */ = {
 			isa = PBXGroup;
 			children = (
+				09853BD82142FB390054F572 /* External */,
 				097AFB0B20F2654F001F05EA /* AppDelegate.h */,
 				097AFB0C20F2654F001F05EA /* AppDelegate.m */,
 				097AFB0D20F2654F001F05EA /* ViewController.h */,
@@ -196,6 +207,7 @@
 			files = (
 				097AFB1020F2654F001F05EA /* ViewController.m in Sources */,
 				097AFB0F20F2654F001F05EA /* AppDelegate.m in Sources */,
+				09853BDA2142FB580054F572 /* MCFilesystem.m in Sources */,
 				EC923C3320169A230019C772 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
