@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0916C99A2129BC9E00DBCD97 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		09497EA0214EAAE30056D2F1 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		097AFB0A20F2653C001F05EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097AFB0820F2653C001F05EA /* Main.storyboard */; };
 		097AFB0F20F2654F001F05EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0C20F2654F001F05EA /* AppDelegate.m */; };
 		097AFB1020F2654F001F05EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0E20F2654F001F05EA /* ViewController.m */; };
@@ -17,25 +17,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09497E9C214EAACD0056D2F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 56C662E89B9C4AD69F7B3343;
+			remoteInfo = ALL_BUILD;
+		};
+		09497E9E214EAAD00056D2F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 40701EA1B1B84776B9676C39;
+			remoteInfo = conky;
+		};
 		EC509185204F1EA800A0C155 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = CE03C49931E14A8B8373644D;
-			remoteInfo = conky;
-		};
-		EC509187204F1EEB00A0C155 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 85F2AC581DD4453CA2408F2B;
-			remoteInfo = ALL_BUILD;
-		};
-		EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 517E41C7D9ED473CBEDFCD98;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				0916C99A2129BC9E00DBCD97 /* conky in CopyFiles */,
+				09497EA0214EAAE30056D2F1 /* conky in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +131,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				EC509188204F1EEB00A0C155 /* PBXTargetDependency */,
-				EC50918A204F1EEF00A0C155 /* PBXTargetDependency */,
+				09497E9D214EAACD0056D2F1 /* PBXTargetDependency */,
+				09497E9F214EAAD00056D2F1 /* PBXTargetDependency */,
 			);
 			name = ConkyX;
 			productName = ConkyX;
@@ -215,15 +215,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EC509188204F1EEB00A0C155 /* PBXTargetDependency */ = {
+		09497E9D214EAACD0056D2F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALL_BUILD;
-			targetProxy = EC509187204F1EEB00A0C155 /* PBXContainerItemProxy */;
+			targetProxy = 09497E9C214EAACD0056D2F1 /* PBXContainerItemProxy */;
 		};
-		EC50918A204F1EEF00A0C155 /* PBXTargetDependency */ = {
+		09497E9F214EAAD00056D2F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = conky;
-			targetProxy = EC509189204F1EEF00A0C155 /* PBXContainerItemProxy */;
+			targetProxy = 09497E9E214EAAD00056D2F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
