@@ -21,14 +21,14 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 56C662E89B9C4AD69F7B3343;
+			remoteGlobalIDString = 45958614328142A1835AEF91;
 			remoteInfo = ALL_BUILD;
 		};
 		09497E9E214EAAD00056D2F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 40701EA1B1B84776B9676C39;
+			remoteGlobalIDString = BC32BD7DCC88436CBB5047AC;
 			remoteInfo = conky;
 		};
 		EC509185204F1EA800A0C155 /* PBXContainerItemProxy */ = {
@@ -359,7 +359,7 @@
 					"$(PROJECT_DIR)/ConkyX",
 				);
 				INFOPLIST_FILE = ConkyX/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,7 +381,7 @@
 					"$(PROJECT_DIR)/ConkyX",
 				);
 				INFOPLIST_FILE = ConkyX/Info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = npyl.developer.ConkyX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
