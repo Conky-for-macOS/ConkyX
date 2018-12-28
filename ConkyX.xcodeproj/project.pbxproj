@@ -7,35 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09497EA0214EAAE30056D2F1 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = EC509186204F1EA800A0C155 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		097AFB0A20F2653C001F05EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097AFB0820F2653C001F05EA /* Main.storyboard */; };
 		097AFB0F20F2654F001F05EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0C20F2654F001F05EA /* AppDelegate.m */; };
 		097AFB1020F2654F001F05EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0E20F2654F001F05EA /* ViewController.m */; };
 		09853BDA2142FB580054F572 /* MCFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 09853BD92142FB580054F572 /* MCFilesystem.m */; };
+		09F54E9421D6A914009D2C07 /* conky in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F54E8621D6A8D8009D2C07 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		EC923C2D20169A230019C772 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC923C2C20169A230019C772 /* Assets.xcassets */; };
 		EC923C3320169A230019C772 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC923C3220169A230019C772 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		09497E9C214EAACD0056D2F1 /* PBXContainerItemProxy */ = {
+		09F54E8521D6A8D8009D2C07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 45958614328142A1835AEF91;
-			remoteInfo = ALL_BUILD;
-		};
-		09497E9E214EAAD00056D2F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BC32BD7DCC88436CBB5047AC;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 79EF87EFEF64417B810703C0;
 			remoteInfo = conky;
 		};
-		EC509185204F1EA800A0C155 /* PBXContainerItemProxy */ = {
+		09F54E8721D6A8D8009D2C07 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = CE03C49931E14A8B8373644D;
+			remoteGlobalIDString = F7ECD38C13D74EFF9D5C230E;
+			remoteInfo = toluapp;
+		};
+		09F54E8921D6A8D8009D2C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F61DE9C967043739316149F;
+			remoteInfo = toluapp_lib_static;
+		};
+		09F54E8B21D6A8E0009D2C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 19CE99E9A0244A0782793AB4;
+			remoteInfo = convertconf;
+		};
+		09F54E8D21D6A8E0009D2C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FC4B0FFBBFD4F5D9C77C9F0;
+			remoteInfo = defconfig;
+		};
+		09F54E8F21D6A8E4009D2C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4451F6E6834649C88948B0B6;
+			remoteInfo = ALL_BUILD;
+		};
+		09F54E9121D6A8F7009D2C07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 97A5D522AC31402DA209FF8A;
 			remoteInfo = conky;
 		};
 /* End PBXContainerItemProxy section */
@@ -47,7 +75,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				09497EA0214EAAE30056D2F1 /* conky in CopyFiles */,
+				09F54E9421D6A914009D2C07 /* conky in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +88,7 @@
 		097AFB0D20F2654F001F05EA /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		097AFB0E20F2654F001F05EA /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		09853BD92142FB580054F572 /* MCFilesystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCFilesystem.m; path = "../../../Manage Conky/MCFilesystem.m"; sourceTree = "<group>"; };
-		EC50917B204F1EA800A0C155 /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/forConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
+		09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = conky.xcodeproj; path = "conky-for-macOS/forConkyX/conky.xcodeproj"; sourceTree = "<group>"; };
 		EC923C2320169A230019C772 /* ConkyX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConkyX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC923C2C20169A230019C772 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC923C3120169A230019C772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,10 +104,12 @@
 			path = External;
 			sourceTree = "<group>";
 		};
-		EC50917C204F1EA800A0C155 /* Products */ = {
+		09F54E7A21D6A8D8009D2C07 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EC509186204F1EA800A0C155 /* conky */,
+				09F54E8621D6A8D8009D2C07 /* conky */,
+				09F54E8821D6A8D8009D2C07 /* toluapp */,
+				09F54E8A21D6A8D8009D2C07 /* libtoluapp.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +117,7 @@
 		EC923C1A20169A230019C772 = {
 			isa = PBXGroup;
 			children = (
-				EC50917B204F1EA800A0C155 /* conky.xcodeproj */,
+				09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */,
 				EC923C2520169A230019C772 /* ConkyX */,
 				EC923C2420169A230019C772 /* Products */,
 			);
@@ -131,8 +161,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				09497E9D214EAACD0056D2F1 /* PBXTargetDependency */,
-				09497E9F214EAAD00056D2F1 /* PBXTargetDependency */,
+				09F54E8C21D6A8E0009D2C07 /* PBXTargetDependency */,
+				09F54E8E21D6A8E0009D2C07 /* PBXTargetDependency */,
+				09F54E9021D6A8E4009D2C07 /* PBXTargetDependency */,
+				09F54E9221D6A8F7009D2C07 /* PBXTargetDependency */,
 			);
 			name = ConkyX;
 			productName = ConkyX;
@@ -167,8 +199,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = EC50917C204F1EA800A0C155 /* Products */;
-					ProjectRef = EC50917B204F1EA800A0C155 /* conky.xcodeproj */;
+					ProductGroup = 09F54E7A21D6A8D8009D2C07 /* Products */;
+					ProjectRef = 09F54E7921D6A8D8009D2C07 /* conky.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -179,11 +211,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		EC509186204F1EA800A0C155 /* conky */ = {
+		09F54E8621D6A8D8009D2C07 /* conky */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
 			path = conky;
-			remoteRef = EC509185204F1EA800A0C155 /* PBXContainerItemProxy */;
+			remoteRef = 09F54E8521D6A8D8009D2C07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09F54E8821D6A8D8009D2C07 /* toluapp */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = toluapp;
+			remoteRef = 09F54E8721D6A8D8009D2C07 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09F54E8A21D6A8D8009D2C07 /* libtoluapp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libtoluapp.a;
+			remoteRef = 09F54E8921D6A8D8009D2C07 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -215,15 +261,25 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		09497E9D214EAACD0056D2F1 /* PBXTargetDependency */ = {
+		09F54E8C21D6A8E0009D2C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = convertconf;
+			targetProxy = 09F54E8B21D6A8E0009D2C07 /* PBXContainerItemProxy */;
+		};
+		09F54E8E21D6A8E0009D2C07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = defconfig;
+			targetProxy = 09F54E8D21D6A8E0009D2C07 /* PBXContainerItemProxy */;
+		};
+		09F54E9021D6A8E4009D2C07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALL_BUILD;
-			targetProxy = 09497E9C214EAACD0056D2F1 /* PBXContainerItemProxy */;
+			targetProxy = 09F54E8F21D6A8E4009D2C07 /* PBXContainerItemProxy */;
 		};
-		09497E9F214EAAD00056D2F1 /* PBXTargetDependency */ = {
+		09F54E9221D6A8F7009D2C07 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = conky;
-			targetProxy = 09497E9E214EAAD00056D2F1 /* PBXContainerItemProxy */;
+			targetProxy = 09F54E9121D6A8F7009D2C07 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
