@@ -17,6 +17,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09B3E41821E91625000D660C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 31C3D147994440F19A4F2D3E;
+			remoteInfo = toluapp;
+		};
+		09B3E41A21E91625000D660C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8539F24504504C438BC3D7E3;
+			remoteInfo = toluapp_lib_static;
+		};
 		09DC920A21E2CDD600C117C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
@@ -42,43 +56,29 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 1C32A9B8816F41EDBCD0E209;
+			remoteGlobalIDString = 2EE00F55BEA84C069931941B;
 			remoteInfo = ALL_BUILD;
 		};
 		09DC921221E2CDE200C117C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 7759362CE8AD430081A69332;
+			remoteGlobalIDString = 3FA5ADE566644D7298FE1DD9;
 			remoteInfo = convertconf;
 		};
 		09DC921421E2CDE200C117C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 999D9A3C72B34314BC05BC17;
+			remoteGlobalIDString = 78DE6EE43E474D0FAC47C911;
 			remoteInfo = defconfig;
 		};
 		09DC921621E2CDEC00C117C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = FA76363026254595A7627786;
+			remoteGlobalIDString = 42796B1490F74D9EA7B669A4;
 			remoteInfo = conky;
-		};
-		09DC921921E2CE5100C117C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E6DB713EE6A34855875B8B2D;
-			remoteInfo = toluapp_lib_static;
-		};
-		09DC921B21E2CE5400C117C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09DC91FE21E2CDD600C117C8 /* conky.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2AA42FCD92F946EAAAFCBF02;
-			remoteInfo = toluapp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -187,8 +187,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				09DC921A21E2CE5100C117C8 /* PBXTargetDependency */,
-				09DC921C21E2CE5400C117C8 /* PBXTargetDependency */,
+				09B3E41B21E91625000D660C /* PBXTargetDependency */,
+				09B3E41921E91625000D660C /* PBXTargetDependency */,
 				09DC921321E2CDE200C117C8 /* PBXTargetDependency */,
 				09DC921521E2CDE200C117C8 /* PBXTargetDependency */,
 				09DC921121E2CDDD00C117C8 /* PBXTargetDependency */,
@@ -289,6 +289,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		09B3E41921E91625000D660C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = toluapp;
+			targetProxy = 09B3E41821E91625000D660C /* PBXContainerItemProxy */;
+		};
+		09B3E41B21E91625000D660C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = toluapp_lib_static;
+			targetProxy = 09B3E41A21E91625000D660C /* PBXContainerItemProxy */;
+		};
 		09DC921121E2CDDD00C117C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALL_BUILD;
@@ -308,16 +318,6 @@
 			isa = PBXTargetDependency;
 			name = conky;
 			targetProxy = 09DC921621E2CDEC00C117C8 /* PBXContainerItemProxy */;
-		};
-		09DC921A21E2CE5100C117C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = toluapp_lib_static;
-			targetProxy = 09DC921921E2CE5100C117C8 /* PBXContainerItemProxy */;
-		};
-		09DC921C21E2CE5400C117C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = toluapp;
-			targetProxy = 09DC921B21E2CE5400C117C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
