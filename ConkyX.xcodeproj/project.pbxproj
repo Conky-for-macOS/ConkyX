@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		09335E3E22C44876002A2744 /* conky in Copy Conky */ = {isa = PBXBuildFile; fileRef = 09335E2F22C44864002A2744 /* conky */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		09335E3F22C4487E002A2744 /* libcairo.dylib in Copy Libcairo */ = {isa = PBXBuildFile; fileRef = 09335E3122C44864002A2744 /* libcairo.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		097AFB0A20F2653C001F05EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 097AFB0820F2653C001F05EA /* Main.storyboard */; };
 		097AFB0F20F2654F001F05EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0C20F2654F001F05EA /* AppDelegate.m */; };
 		097AFB1020F2654F001F05EA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097AFB0E20F2654F001F05EA /* ViewController.m */; };
@@ -24,34 +23,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 960F264018D24406A2036256;
 			remoteInfo = conky;
-		};
-		09335E3022C44864002A2744 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09335E1E22C44864002A2744 /* conky.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8EEFAE5AAE8C47B398C5A3E5;
-			remoteInfo = "conky-cairo";
-		};
-		09335E3222C44864002A2744 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09335E1E22C44864002A2744 /* conky.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 40DD569FB374459FB8754D5D;
-			remoteInfo = "conky-cairo_imlib2_helper";
-		};
-		09335E3422C44864002A2744 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09335E1E22C44864002A2744 /* conky.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E08D91750CF84DC784EC035B;
-			remoteInfo = "conky-imlib2";
-		};
-		09335E3622C44864002A2744 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 09335E1E22C44864002A2744 /* conky.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 96C81EB8E43A4D59A384FACB;
-			remoteInfo = "conky-rsvg";
 		};
 		09335E3822C44864002A2744 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -71,7 +42,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 09335E1E22C44864002A2744 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 3EDDD7DF001A45AB9342863B;
+			remoteGlobalIDString = EAF57FFAE2664917812ABA15;
 			remoteInfo = ALL_BUILD;
 		};
 /* End PBXContainerItemProxy section */
@@ -83,7 +54,6 @@
 			dstPath = lua;
 			dstSubfolderSpec = 7;
 			files = (
-				09335E3F22C4487E002A2744 /* libcairo.dylib in Copy Libcairo */,
 			);
 			name = "Copy Libcairo";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,10 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				09335E2F22C44864002A2744 /* conky */,
-				09335E3122C44864002A2744 /* libcairo.dylib */,
-				09335E3322C44864002A2744 /* libcairo_imlib2_helper.dylib */,
-				09335E3522C44864002A2744 /* libimlib2.dylib */,
-				09335E3722C44864002A2744 /* librsvg.dylib */,
 				09335E3922C44864002A2744 /* toluapp */,
 				09335E3B22C44864002A2744 /* libtoluapp.a */,
 			);
@@ -238,34 +204,6 @@
 			fileType = "compiled.mach-o.executable";
 			path = conky;
 			remoteRef = 09335E2E22C44864002A2744 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09335E3122C44864002A2744 /* libcairo.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libcairo.dylib;
-			remoteRef = 09335E3022C44864002A2744 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09335E3322C44864002A2744 /* libcairo_imlib2_helper.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libcairo_imlib2_helper.dylib;
-			remoteRef = 09335E3222C44864002A2744 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09335E3522C44864002A2744 /* libimlib2.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = libimlib2.dylib;
-			remoteRef = 09335E3422C44864002A2744 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		09335E3722C44864002A2744 /* librsvg.dylib */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.dylib";
-			path = librsvg.dylib;
-			remoteRef = 09335E3622C44864002A2744 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		09335E3922C44864002A2744 /* toluapp */ = {
