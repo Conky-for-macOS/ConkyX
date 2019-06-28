@@ -67,11 +67,11 @@
 			remoteGlobalIDString = FE44F9326CEC409993304CEA;
 			remoteInfo = toluapp_lib_static;
 		};
-		09335E3C22C4486E002A2744 /* PBXContainerItemProxy */ = {
+		09335E6C22C451DB002A2744 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 09335E1E22C44864002A2744 /* conky.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 566F3FF75051450AA38522D9;
+			remoteGlobalIDString = 3EDDD7DF001A45AB9342863B;
 			remoteInfo = ALL_BUILD;
 		};
 /* End PBXContainerItemProxy section */
@@ -186,7 +186,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				09335E3D22C4486E002A2744 /* PBXTargetDependency */,
+				09335E6D22C451DB002A2744 /* PBXTargetDependency */,
 			);
 			name = ConkyX;
 			productName = ConkyX;
@@ -311,10 +311,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		09335E3D22C4486E002A2744 /* PBXTargetDependency */ = {
+		09335E6D22C451DB002A2744 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ALL_BUILD;
-			targetProxy = 09335E3C22C4486E002A2744 /* PBXContainerItemProxy */;
+			targetProxy = 09335E6C22C451DB002A2744 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
